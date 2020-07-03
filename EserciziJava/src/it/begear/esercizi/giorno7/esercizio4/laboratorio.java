@@ -14,14 +14,13 @@ public class laboratorio {
 	public static void main(String[] args) throws Exception {
 
 		Scanner scannerUtente = new Scanner(System.in);
-
-		System.out.println("Benvenuto nel laboratorio di malattie cellulari");
+		System.out.println("Benvenuto nel laboratorio di malattie cellulari della Miskatonic University ");
 		System.out.println("Inserisci il tipo di creatura da zombizzare");
 		String nome = scannerUtente.next();
 		System.out.println("Inserisci la quantità di siero da somministrare (da 1 a 100)");
 		int siero = scannerUtente.nextInt();
 		EssereVivente essereVivente1 = new EssereVivente(nome, siero);
-		System.out.println("Abbiamo somministrato " + siero + " di siero a " + nome);
+		System.out.println("Abbiamo somministrato " + siero + " ml di siero a " + nome);
 		ArrayList<EssereVivente> listaMalati = new ArrayList<EssereVivente>();
 		ArrayList<EssereVivente> listaSani = new ArrayList<EssereVivente>();
 		System.out.println(
@@ -32,7 +31,6 @@ public class laboratorio {
 				try {
 					sonda(essereVivente1, listaMalati, listaSani);
 				} catch (Exception e) {
-
 					e.printStackTrace();
 				}
 			} else if (risposta.equals("N") || risposta.equals("n") || risposta.equals("no") || risposta.equals("No")) {
@@ -42,11 +40,8 @@ public class laboratorio {
 				throw new Exception();
 			}
 		} catch (Exception e) {
-
 		}
-
 	}
-
 	public static void sonda(EssereVivente essereVivente, ArrayList esseriMalati, ArrayList esseriSani)
 			throws Exception {
 		try {
