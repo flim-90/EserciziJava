@@ -11,7 +11,6 @@ public class Stazione {
 
 	public static void main(String[] args) {
 
-		
 		Utente utente1 = new Utente("federico");
 
 		try {
@@ -19,8 +18,6 @@ public class Stazione {
 //avrebbe una stringa in entrata e aggiungo federico come ci dice eclipse
 // stringa necessaria in utente per definire come attributo dell'oggetto
 // il nome // 
-
-			
 
 //	System.out.print(federico.getNome());	
 
@@ -61,31 +58,28 @@ public class Stazione {
 // ora voglio vedere i biglietti di federico uno ad uno quindi un bel ciclo
 // for e per ogni biglietto nell'array biglietti stampo il suo numero
 
-/*			Biglietto[] biglietti = utente1.getBiglietti();
-			for (int i = 0; i < biglietti.length; i++) {
-
-				Biglietto biglietto = biglietti[i];
-				System.out.println("numero del biglietto: " + biglietto.getNumero());
-				System.out.println("validità del biglietto: " + biglietto.getValidita());
-//				System.out.println(biglietto.getGiornoDivalidita());
-//				System.out.println(biglietto.getSettimanaDivalidita());
-//				System.out.println(biglietto.getMeseDivalidita());
-			} */
+			/*
+			 * Biglietto[] biglietti = utente1.getBiglietti(); for (int i = 0; i <
+			 * biglietti.length; i++) {
+			 * 
+			 * Biglietto biglietto = biglietti[i];
+			 * System.out.println("numero del biglietto: " + biglietto.getNumero());
+			 * System.out.println("validità del biglietto: " + biglietto.getValidita()); //
+			 * System.out.println(biglietto.getGiornoDivalidita()); //
+			 * System.out.println(biglietto.getSettimanaDivalidita()); //
+			 * System.out.println(biglietto.getMeseDivalidita()); }
+			 */
 
 			System.out.println("valori dei biglietti dell'utente " + utente1.getNome() + ":");
 			utente1.getBiglietti();
 		} catch (BigliettoInvalido e) {
-			
+
 			System.out.println(e.getMessaggioDiErrore());
 			e.printStackTrace();
-			
-		
+
 		}
 
 // e cerco di stamparli mostrando i loro valori interni
 
-		
-		
-		
 	}
 }

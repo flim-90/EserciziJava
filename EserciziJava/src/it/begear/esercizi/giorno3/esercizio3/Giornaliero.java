@@ -17,7 +17,7 @@ public class Giornaliero extends Biglietto {
 		} else {
 			throw new BigliettoInvalido("Giorno selezionato non valido");
 		}
-		
+
 // incapsuliamo ora il parametro giornoDiValidità
 
 	}

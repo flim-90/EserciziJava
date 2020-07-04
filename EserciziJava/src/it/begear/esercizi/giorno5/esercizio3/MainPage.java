@@ -8,48 +8,37 @@ import it.begear.esercizi.giorno5.esercizio4.EssereVivente;
 
 public class MainPage {
 
-	
-	
-	
 	public static void main(String[] args) {
-		Persona persona1 = new Persona("franco","rossi","franco.rossi@gmail.com");
-		Persona persona2 = new Persona("michele","bianchi","michelebianchitiscali.it");
+		Persona persona1 = new Persona("franco", "rossi", "franco.rossi@gmail.com");
+		Persona persona2 = new Persona("michele", "bianchi", "michelebianchitiscali.it");
 
-		
-			try {checker(persona1);} 
-			
-			catch (Exception e){
-				
-				
-			} finally {
-				
-				
-				
-			}
-			
-			
-			try {checker(persona2);
-			} catch( Exception e) {
-			
-			} 
-			}
-	
+		try {
+			checker(persona1);
+		}
 
-		
-	
-	
-	private static void checker(Persona persona) throws Exception  {
-		if (persona.getEmail() != null && persona.getEmail().contains("@") && persona.getEmail().contains(".") ) {
-			
-			System.out.println((persona.getNome()+" "+persona.getCognome()+" "+persona.getEmail()));
-			
+		catch (Exception e) {
+
+		} finally {
+
+		}
+
+		try {
+			checker(persona2);
+		} catch (Exception e) {
+
+		}
+	}
+
+	private static void checker(Persona persona) throws Exception {
+		if (persona.getEmail() != null && persona.getEmail().contains("@") && persona.getEmail().contains(".")) {
+
+			System.out.println((persona.getNome() + " " + persona.getCognome() + " " + persona.getEmail()));
+
 		} else {
-			
-			
+
 			System.out.println("email non valida");
 			throw new Exception();
-			
-			
-		
-	}  }}
-	
+
+		}
+	}
+}

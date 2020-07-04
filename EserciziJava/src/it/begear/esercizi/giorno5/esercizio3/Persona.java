@@ -4,15 +4,13 @@ public class Persona {
 	private String nome;
 	private String cognome;
 	private String email;
-	
-	
-	
-	
+
 	public Persona(String nome, String cognome, String email) {
 		super();
 		setNome(nome);
 		setCognome(cognome);
-		setEmail(email);	}
+		setEmail(email);
+	}
 
 	public String getNome() {
 		return nome;
@@ -37,9 +35,5 @@ public class Persona {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
-	
-	
-	
+
 }

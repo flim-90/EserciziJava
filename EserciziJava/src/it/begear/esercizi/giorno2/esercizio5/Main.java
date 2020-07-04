@@ -27,7 +27,11 @@ public class Main {
 
 		System.out.println(Arrays.toString(array1));
 		System.out.println(Arrays.toString(array2));
-		braccio(array1, array2);
+
+		try {
+			braccio(array1, array2);
+		} catch (Exception e) {
+		}
 		System.out.println("eseguo");
 		System.out.println(Arrays.toString(array1));
 		System.out.println(Arrays.toString(array2));
@@ -37,19 +41,18 @@ public class Main {
 
 		for (int i = 0; i < lista1.length; i++) {
 
-			if (lista1[i] == "pomodoro" || lista1[i] == "mozzarella" || lista1[i] == "lattuga"
-					|| lista1[i] == "spezie") {
+			if (lista1[i].equals("pomodoro") || lista1[i].equals("mozzarella") || lista1[i].equals("lattuga")
+					|| lista1[i].equals("spezie")) {
 
-				lista1[i] = lista2[i];
+				// lista2[i].equals(lista1[i]); pirla non è una comparazione ma un'assegnazione
+				lista2[i] = lista1[i];
 
-			} else if (lista1[i] != "pomodoro" || lista1[i] != "mozzarella" || lista1[i] != "lattuga"
-					|| lista1[i] != "spezie") {
-
-				System.out.println("non posso inserire questo alimento");
-
-			} else if (lista1[i] == "" || lista1[i] == null) {
+			} else if (lista1[i].equals("") || lista1[i].equals(null)) {
 
 				System.out.println("nessun alimento selezionato");
+			} else {
+
+				System.out.println("non posso inserire questo alimento");
 
 			}
 

@@ -42,6 +42,7 @@ public class laboratorio {
 		} catch (Exception e) {
 		}
 	}
+
 	public static void sonda(EssereVivente essereVivente, ArrayList esseriMalati, ArrayList esseriSani)
 			throws Exception {
 		try {

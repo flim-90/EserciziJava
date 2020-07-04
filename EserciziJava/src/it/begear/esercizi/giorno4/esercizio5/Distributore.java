@@ -1,28 +1,23 @@
 package it.begear.esercizi.giorno4.esercizio5;
 
-public class Distributore  {
-	
-	
+public class Distributore {
+
 	private String citta;
 	private String proprietario;
 	private int capacita;
 	private int contenuto;
-	
-	public void erogazione (Distributore distributore, int erogato, int costoBenzinaOggi) {
+
+	public void erogazione(Distributore distributore, int erogato, int costoBenzinaOggi) {
 		if (distributore.capacita > erogato) {
-		System.out.println("Il distributore " + proprietario + " di " + citta + " ha erogato " + erogato + " l rimangono "
-		+ (capacita - erogato) + " l per un guadagno di " + (erogato * costoBenzinaOggi) + " £ ");
+			System.out.println(
+					"Il distributore " + proprietario + " di " + citta + " ha erogato " + erogato + " l rimangono "
+							+ (capacita - erogato) + " l per un guadagno di " + (erogato * costoBenzinaOggi) + " £ ");
 		} else {
-			
+
 			System.out.println("Impossibile erogare la quantità selezionata");
-			
-			
+
 		}
-	
-	
-	
-	
-	
+
 	}
 
 	public String getCitta() {
@@ -55,8 +50,6 @@ public class Distributore  {
 
 	public void setContenuto(int contenuto) {
 		this.contenuto = contenuto;
-	} 
+	}
 
-	
-	
 }

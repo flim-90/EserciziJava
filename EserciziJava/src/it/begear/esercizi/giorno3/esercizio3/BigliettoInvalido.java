@@ -1,4 +1,5 @@
 package it.begear.esercizi.giorno3.esercizio3;
+
 // vclasse personalizzata di eccezioni
 public class BigliettoInvalido extends Exception {
 	private String messaggioDiErrore;
@@ -19,8 +20,5 @@ public class BigliettoInvalido extends Exception {
 	public void setMessaggioDiErrore(String messaggioDiErrore) {
 		this.messaggioDiErrore = messaggioDiErrore;
 	}
-
-	
-
 
 }

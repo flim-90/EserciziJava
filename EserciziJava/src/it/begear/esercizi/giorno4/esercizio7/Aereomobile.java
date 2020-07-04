@@ -1,6 +1,6 @@
 package it.begear.esercizi.giorno4.esercizio7;
 
-public abstract class  Aereomobile {
+public abstract class Aereomobile {
 
 	private String sigla;
 

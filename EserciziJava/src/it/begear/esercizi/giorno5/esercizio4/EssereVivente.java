@@ -16,5 +16,4 @@ public class EssereVivente {
 		this.esistenza = esistenza;
 	}
 
-	
-	}
+}
