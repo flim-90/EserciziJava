@@ -21,8 +21,9 @@ public class Main {
 		
 		// variabile = (espressione) ? True : False
 		if (persona1.getOrientamentoAlimentare() == true) {
-			alimento1.isVegetariano() = true ? 
-					System.out.println(persona1 + " può mangiarlo; ") : System.out.println(persona1 + " non può mangiarlo ");
+			String veg = (alimento1.isVegetariano() == true)? "true" : "false";
+			/*alimento1.isVegetariano() == true ? 
+					System.out.println(persona1 + " può mangiarlo; ") : System.out.println(persona1 + " non può mangiarlo ");*/
 		} else if (persona1.getOrientamentoAlimentare() == false) {
 			System.out.println(persona1 + " può mangiare tutto; ");
 		}

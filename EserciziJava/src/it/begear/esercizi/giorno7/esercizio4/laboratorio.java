@@ -63,3 +63,4 @@ public class laboratorio {
 	}
 
 }
+/*prova a delegare ad una classe funz l'elab dei dati '*/
