@@ -6,8 +6,11 @@ che si preoccupi della stampa a video del risultato*/
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		Operazione operazione1 = new Operazione(10, 2);
 
+		operazione1.stampatore(operazione1.somma());
+		
 	}
 
 }
