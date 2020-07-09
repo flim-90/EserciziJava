@@ -16,8 +16,8 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Animale[] acquarioPesci = new Animale[2];
-		Animale[] acquarioMammiferi = new Animale[2];
+		Animale[] acquarioPesci = new Animale[5];
+		Animale[] acquarioMammiferi = new Animale[5];
 
 		Scanner scannerUtente = new Scanner(System.in);
 
@@ -43,11 +43,9 @@ public class Main {
 			if (acquarioScelto.toLowerCase().equals("m") && animale1.getClasse().equals("mammifero")) {
 				for (int i = 0; i < acquarioMammiferi.length; i++) {
 					if (acquarioMammiferi[i] == null) {
-						if (acquarioMammiferi[0] == null && acquarioMammiferi[1] == null) {
-							acquarioMammiferi[0] = animale1;
-						}  if (acquarioMammiferi[0] != null && acquarioMammiferi[1] == null) {
-							acquarioMammiferi[1] = animale1;
-						}
+						acquarioMammiferi[i] = animale1;
+						break;
+
 					}
 
 					else {
@@ -59,10 +57,10 @@ public class Main {
 			} else if (acquarioScelto.toLowerCase().equals("p") && animale1.getClasse().toLowerCase().equals("pesce")) {
 				for (int i = 0; i < acquarioPesci.length; i++) {
 					if (acquarioPesci[i] == null) {
-						if (acquarioPesci[0] == null && acquarioPesci[1] == null) {
-							acquarioPesci[0] = animale1;
-						} if (acquarioPesci[0] != null && acquarioPesci[1] == null) {
-							acquarioPesci[1] = animale1;
+						if (acquarioPesci[i] == null) {
+							acquarioPesci[i] = animale1;
+							break;
+
 						}
 					}
 
