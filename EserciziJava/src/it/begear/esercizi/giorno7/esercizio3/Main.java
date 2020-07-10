@@ -1,7 +1,6 @@
 package it.begear.esercizi.giorno7.esercizio3;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 /*ESERCIZIO 3 - Creare due acquari, uno accoglierà 2 mammiferi marini, l'altro 2 pesci. 
 Chiedere in ingresso all'utente le caratteristiche degli animali:
@@ -16,11 +15,12 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Animale[] acquarioPesci = new Animale[2];
-		Animale[] acquarioMammiferi = new Animale[2];
+		List<Animale> acquarioPesci = new ArrayList<Animale>();
+		List<Animale> acquarioMammiferi = new ArrayList<Animale>();
 
 		Scanner scannerUtente = new Scanner(System.in);
-		String continua = null;
+		String continua;
+		
 		do {
 			System.out.println("Benvenuto nell'acquario ufficiale della Miskatonic University ");
 			System.out.println("--------------------------------------------------------------");
@@ -41,24 +41,24 @@ public class Main {
 				System.out.println("------Per mettere l'animale nell'acquario di Pesci premi P------");
 				String acquarioScelto = scannerUtente.next();
 				switch (acquarioScelto.toLowerCase()) {
-				case "M":
+//				case "M":
 				case "m":
 				case "mammifero":
-				case "Mammifero":
+//				case "Mammifero":
 					inserisciAnimale(acquarioMammiferi, animale1);
 					break;
 
-				case "P":
+//				case "P":
 				case "p":
 				case "pesci":
-				case "Pesci":
+//				case "Pesci":
 					inserisciAnimale(acquarioPesci, animale1);
 					break;
 				default:
 					System.out
-							.println("------Siamo spiacemti ma è pericoloso inserire mammiferi e pesci insieme------");
+					.println("------Siamo spiacemti ma è pericoloso inserire mammiferi e pesci insieme------");
 					System.out
-							.println("--------------------------azione non consentita-------------------------------");
+					.println("--------------------------azione non consentita-------------------------------");
 					throw new IllegalArgumentException("Unexpected value: " + acquarioScelto.toLowerCase());
 				}
 
@@ -97,29 +97,34 @@ public class Main {
 
 	}
 
-	private static void inserisciAnimale(Animale[] acquario, Animale animale) {
-		for (int i = 0; i < acquario.length; i++) {
+	private static void inserisciAnimale(List<Animale> acquario, Animale animale) {
+		
+		try {
+		if (acquario.size() < 2) {
+			acquario.add(animale);
+		} else if (acquario.size() >= 2) throw new IndexOutOfBoundsException();
 
-			if (acquario[i] == null) {
-				acquario[i] = animale;
-				break;
-
-			}
-
-			else {
-				System.out.println("------Siamo spiacemti ma non c'è più spazio nell'acquario------");
-
-			}
-
+		} catch (IndexOutOfBoundsException e) {
+			System.out.println("------Siamo spiacemti ma non c'è più spazio nell'acquario------");
 		}
+		
+//		for (int i = 0; i < acquario.length; i++) {
+//
+//			if (acquario[i] == null) {
+//				acquario[i] = animale;
+//				break;
+//
+//			} else if (acquario[i] != null) {
+//				System.out.println("------Siamo spiacemti ma non c'è più spazio nell'acquario------");
+//
+//			}
+//
+//		}
 	}
 
-	private static void stampaAcquario(Animale[] acquario) {
-		for (Animale animale : acquario) {
-			if (animale != null) {
-				System.out.println(animale.getNome());
-			}
-		}
+	private static void stampaAcquario(List<Animale> acquario) {
+		System.out.println(acquario.toString());
+		
 	}
 
 	private static void rimuoviAnimale(Animale[] acquario, Animale animale) {
