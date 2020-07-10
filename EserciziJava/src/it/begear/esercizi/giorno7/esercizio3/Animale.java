@@ -26,5 +26,9 @@ public class Animale {
 	public void setClasse(String classe) {
 		this.classe = classe;
 	}
+	
+	public String toString () {
+		return this.nome;
+	}
 
 }
